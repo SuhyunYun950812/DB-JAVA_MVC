@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSpaceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableSpaceOraclev10g" name="USERS" directorySegmentName="seg_0" id="D53E0036-0335-B551-F6FE-1EBB84E5A72C">
+<sourceConnName>로컬-KIOSK</sourceConnName>
+<sourceObjSchema>KIOSK</sourceObjSchema>
+<sourceObjName>USERS</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-22 01:09:54 UTC</createdTime>
+<ownerDesignName>kiosk_model</ownerDesignName>
+<emUniformSize>0</emUniformSize>
+<extentManagement>LOCAL</extentManagement>
+</TableSpaceOraclev10g>

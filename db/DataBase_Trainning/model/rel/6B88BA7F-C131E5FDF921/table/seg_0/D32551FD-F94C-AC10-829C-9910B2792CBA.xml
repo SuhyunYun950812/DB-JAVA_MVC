@@ -1,0 +1,209 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D32551FD-F94C-AC10-829C-9910B2792CBA" schemaObject="DB248A45-7360-FE3D-B95B-43B3CED22BBB" name="LOCATIONS">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>LOCATIONS</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[Locations table that contains specific address of a specific office,
+warehouse, and/or production site of a company. Does not store addresses /
+locations of customers. Contains 23 rows; references with the
+departments and countries tables. ]]></commentInRDBMS>
+<ownerDesignName>model</ownerDesignName>
+<importedID>E3725BB7-81A0-B70D-939E-5272423407D2</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="LOCATION_ID" id="88FF935F-644B-0508-6C97-1BC3B2908A84">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>LOCATIONS</sourceObjSchema>
+<sourceObjName>LOCATION_ID</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[Primary key of locations table]]></commentInRDBMS>
+<ownerDesignName>model</ownerDesignName>
+<importedID>3FB5B78E-FABE-FEB8-BEC2-217E48F8AA4D</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,4,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STREET_ADDRESS" id="B62E6758-C878-5523-5721-034C562E7050">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>LOCATIONS</sourceObjSchema>
+<sourceObjName>STREET_ADDRESS</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[Street address of an office, warehouse, or production site of a company.
+Contains building number and street name]]></commentInRDBMS>
+<ownerDesignName>model</ownerDesignName>
+<importedID>03EA7271-5353-2138-573C-9530721DEB5B</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="POSTAL_CODE" id="DDE728F1-9031-C71F-34E4-6D52D962A5F2">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>LOCATIONS</sourceObjSchema>
+<sourceObjName>POSTAL_CODE</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[Postal code of the location of an office, warehouse, or production site
+of a company. ]]></commentInRDBMS>
+<ownerDesignName>model</ownerDesignName>
+<importedID>42482526-1F56-213A-7A97-21C0CCB25B9C</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12 BYTE</dataTypeSize>
+<ownDataTypeParameters>12 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CITY" id="B72D7F7B-583A-A04B-EF7A-0E398062BA16">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>LOCATIONS</sourceObjSchema>
+<sourceObjName>CITY</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[A not null column that shows city where an office, warehouse, or
+production site of a company is located. ]]></commentInRDBMS>
+<ownerDesignName>model</ownerDesignName>
+<importedID>F388DF41-C244-6C2B-CC24-1B4BA0B0B9F6</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>LOC_CITY_NN</notNullConstraintName>
+</Column>
+<Column name="STATE_PROVINCE" id="DA5A1730-A857-13C0-512D-4974B0D6DE9B">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>LOCATIONS</sourceObjSchema>
+<sourceObjName>STATE_PROVINCE</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[State or Province where an office, warehouse, or production site of a
+company is located.]]></commentInRDBMS>
+<ownerDesignName>model</ownerDesignName>
+<importedID>EE45546F-67B2-4A44-CDD2-BFA13C8597FB</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COUNTRY_ID" id="B2830B55-F457-0E72-252E-6D19A04ADF1D">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>LOCATIONS</sourceObjSchema>
+<sourceObjName>COUNTRY_ID</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[Country where an office, warehouse, or production site of a company is
+located. Foreign key to country_id column of the countries table.]]></commentInRDBMS>
+<ownerDesignName>model</ownerDesignName>
+<importedID>5D1E444E-B472-1D95-A2D1-CCE6B8C82731</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 BYTE</dataTypeSize>
+<ownDataTypeParameters>2 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EE25A302-E2F9-E5D9-FB64-D4EECB3ED5D1" referredColumn="1A5234C9-72AD-88F7-BD9E-90094BBA506D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6CC52BBF-A448-9842-9E27-1C945D664C64" name="LOC_ID_PK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>LOC_ID_PK</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>B85A26F1-B552-3772-211D-C3E9E0F4AD51</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="88FF935F-644B-0508-6C97-1BC3B2908A84"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="15A1EEAE-6C1A-76A1-8507-AE4D99D56AFC" schemaObject="DB248A45-7360-FE3D-B95B-43B3CED22BBB" name="LOC_CITY_IX">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>LOC_CITY_IX</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>C8364EF9-028B-A25E-035B-4B5896599587</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B72D7F7B-583A-A04B-EF7A-0E398062BA16"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E78F7EF3-6189-4C9D-A5BA-B3FCD1E4FD6E" schemaObject="DB248A45-7360-FE3D-B95B-43B3CED22BBB" name="LOC_COUNTRY_IX">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>LOC_COUNTRY_IX</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>BEE10E5A-AC12-7EE6-7C98-A11DCDF5D6E9</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B2830B55-F457-0E72-252E-6D19A04ADF1D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D98C1A03-AE32-6068-2CD4-9D88EB9946ED" schemaObject="DB248A45-7360-FE3D-B95B-43B3CED22BBB" name="LOC_ID_PK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>LOC_ID_PK</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>F1EFC459-B9A6-E913-894D-9B26BE148968</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="88FF935F-644B-0508-6C97-1BC3B2908A84"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3B193F70-8F7D-B15C-8594-945DC389FD9C" schemaObject="DB248A45-7360-FE3D-B95B-43B3CED22BBB" name="LOC_STATE_PROVINCE_IX">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>LOC_STATE_PROVINCE_IX</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>28944E6C-53B8-19A7-7036-179E3529CB35</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DA5A1730-A857-13C0-512D-4974B0D6DE9B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="74F14227-CD68-34D2-14D8-428D8C46847B" name="LOC_C_ID_FK">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B2830B55-F457-0E72-252E-6D19A04ADF1D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

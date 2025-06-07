@@ -1,0 +1,80 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EB442FC5-CB73-A1D8-9851-C3A944EEF9E9" name="MEMBER">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 07:28:29 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<ordsAlias>table_14</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MEMBER_ID" id="F505B645-A3D1-7E24-0365-8B11633BFCD7">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 07:29:19 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MEMBER_PW" id="FAE845DF-8F71-AF4B-4EE0-6205C3F7AE1A">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 07:30:05 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MEMBER_NAME" id="0682D5A6-AFC3-5EE7-CD89-6C79777AD483">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 07:31:13 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MEMBER_PHONE" id="4A4E2920-CB3E-0DE7-641A-5E0652B565DE">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 07:31:59 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MEMBER_MANAGER" id="1DD1A569-A246-BEFB-10A0-915B51340848">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 07:35:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[1 = 관리자
+2 = 회원]]></commentInRDBMS>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A654CFE8-D476-ACBF-F3A7-F775CF17F47A" name="MEMBER_PK">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 07:30:05 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F505B645-A3D1-7E24-0365-8B11633BFCD7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

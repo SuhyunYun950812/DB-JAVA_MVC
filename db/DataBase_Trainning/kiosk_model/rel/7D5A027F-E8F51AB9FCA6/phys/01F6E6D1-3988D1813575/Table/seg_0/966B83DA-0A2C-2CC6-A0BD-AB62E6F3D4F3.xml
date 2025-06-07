@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="CART" directorySegmentName="seg_0" id="966B83DA-0A2C-2CC6-A0BD-AB62E6F3D4F3">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-22 01:09:54 UTC</createdTime>
+<ownerDesignName>kiosk_model</ownerDesignName>
+<schemaObject>BC63CF9A-DE1B-9FDD-CB8A-7F7013C9436F</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>3682B0DF-1DEF-5038-F906-49F9792669F3</segment>
+<tableSpace>D53E0036-0335-B551-F6FE-1EBB84E5A72C</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="CART_INDEX" id="0A875C84-4FC8-02AF-70D1-7B3218BE4A58">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-22 01:09:54 UTC</createdTime>
+<ownerDesignName>kiosk_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CART_TOTAL" id="467975F6-199E-8970-832F-444AED1FAE67">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-22 01:09:54 UTC</createdTime>
+<ownerDesignName>kiosk_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MENU_NAME" id="50FB7ADF-DADB-796C-C052-E6A1ACD82901">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-22 01:09:54 UTC</createdTime>
+<ownerDesignName>kiosk_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CART_DATE" id="52196B79-1264-5DD9-A2AC-995826EAA886">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-22 01:09:54 UTC</createdTime>
+<ownerDesignName>kiosk_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MEMBER_MEMBER_ID" id="6A222505-29C6-9BAF-DF71-520D82957D07">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-22 01:09:54 UTC</createdTime>
+<ownerDesignName>kiosk_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MENU_MENU_INDEX" id="6A3D8273-D7BB-583B-5764-AF863279D01D">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-22 01:09:54 UTC</createdTime>
+<ownerDesignName>kiosk_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CART_COUNT" id="BD49A1E2-8C37-FE78-F41D-7246D3742076">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-22 01:09:54 UTC</createdTime>
+<ownerDesignName>kiosk_model</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="CART_PK" id="19BA1843-A18E-CE48-248C-4D5A5B7414E8">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-22 01:09:54 UTC</createdTime>
+<ownerDesignName>kiosk_model</ownerDesignName>
+<schemaObject>BC63CF9A-DE1B-9FDD-CB8A-7F7013C9436F</schemaObject>
+<segment>1D70493A-B2F8-FD78-76BA-6057D8F6B7FC</segment>
+<tableSpace>D53E0036-0335-B551-F6FE-1EBB84E5A72C</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="MENU_INDEX" id="28A1D0C8-A589-5221-038A-1D2341A38F12">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-22 01:09:55 UTC</createdTime>
+<ownerDesignName>kiosk_model</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="MEMBER_ID" id="86CEDD8C-81BE-1A83-7FD9-952E63E23941">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-22 01:09:55 UTC</createdTime>
+<ownerDesignName>kiosk_model</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CART_PK" id="819F580E-4AE4-F93F-E35A-23DAD07146D1">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-22 01:09:55 UTC</createdTime>
+<ownerDesignName>kiosk_model</ownerDesignName>
+<segment>1D70493A-B2F8-FD78-76BA-6057D8F6B7FC</segment>
+<tableSpace>D53E0036-0335-B551-F6FE-1EBB84E5A72C</tableSpace>
+<existingIndex>19BA1843-A18E-CE48-248C-4D5A5B7414E8</existingIndex>
+<indexSegment>1D70493A-B2F8-FD78-76BA-6057D8F6B7FC</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

@@ -1,0 +1,370 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4A0E9152-5328-6183-496F-66223546494B" schemaObject="DB248A45-7360-FE3D-B95B-43B3CED22BBB" name="EMPLOYEES">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>EMPLOYEES</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[employees table. Contains 107 rows. References with departments,
+jobs, job_history tables. Contains a self reference.]]></commentInRDBMS>
+<ownerDesignName>model</ownerDesignName>
+<importedID>ADDF8087-40BC-5EF8-5996-718215925E8D</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="EMPLOYEE_ID" id="249B1D2B-1819-3D96-B790-3A4A3475A2BB">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>EMPLOYEE_ID</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[Primary key of employees table.]]></commentInRDBMS>
+<ownerDesignName>model</ownerDesignName>
+<importedID>44AF0C14-D2FB-F7D1-1522-174C53A3BD7C</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FIRST_NAME" id="86FC0B64-4EA7-0188-DBE6-B8DA1726517B">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>FIRST_NAME</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[First name of the employee. A not null column.]]></commentInRDBMS>
+<ownerDesignName>model</ownerDesignName>
+<importedID>C8121D71-6857-7475-C8DE-C5DC34C092FD</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAST_NAME" id="1228BF45-E21C-12CB-789C-AE28AA9595C4">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>LAST_NAME</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[Last name of the employee. A not null column.]]></commentInRDBMS>
+<ownerDesignName>model</ownerDesignName>
+<importedID>5FCD8B6C-C4A9-31F2-B7EF-3463E377F7AE</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>EMP_LAST_NAME_NN</notNullConstraintName>
+</Column>
+<Column name="EMAIL" id="95871768-3F71-53ED-9DB7-617A6C7F330C">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>EMAIL</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[Email id of the employee]]></commentInRDBMS>
+<ownerDesignName>model</ownerDesignName>
+<importedID>FBC5A0D0-93F1-19C3-EA60-D9DF22405CDF</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>EMP_EMAIL_NN</notNullConstraintName>
+</Column>
+<Column name="PHONE_NUMBER" id="B6397EFA-9E9A-40A7-81A6-D52BE3E6BDFF">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>PHONE_NUMBER</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[Phone number of the employee; includes country code and area code]]></commentInRDBMS>
+<ownerDesignName>model</ownerDesignName>
+<importedID>F0B20924-33B1-1997-2144-5D82879F26F0</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HIRE_DATE" id="CD5243E0-46B4-4824-1384-25F97680E019">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>HIRE_DATE</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date when the employee started on this job. A not null column.]]></commentInRDBMS>
+<ownerDesignName>model</ownerDesignName>
+<importedID>7DBD30C9-70F2-17DB-B06D-B07D718764AD</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>EMP_HIRE_DATE_NN</notNullConstraintName>
+</Column>
+<Column name="JOB_ID" id="BB111218-40ED-0405-07BD-E1251C4D82F3">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>JOB_ID</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[Current job of the employee; foreign key to job_id column of the
+jobs table. A not null column.]]></commentInRDBMS>
+<ownerDesignName>model</ownerDesignName>
+<importedID>651B7A1C-E7A0-2238-BD03-50D6E0410BD1</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>EMP_JOB_NN</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="ABE5F667-1E1E-44CE-4E61-0CF5E7D91CF8" referredColumn="9FF2E4E6-0393-B102-B61F-C91B1065BF58"/>
+</associations>
+</Column>
+<Column name="SALARY" id="A5FA9CE6-A9E1-D588-E097-E3CBBC747503">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>SALARY</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[Monthly salary of the employee. Must be greater
+than zero (enforced by constraint emp_salary_min)]]></commentInRDBMS>
+<ownerDesignName>model</ownerDesignName>
+<importedID>1413F25C-4E03-EC7F-A331-DAC62341085E</importedID>
+<constraintName>EMP_SALARY_MIN</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="salary &gt; 0"/>
+<implementationDef dbType="Oracle Database 21c" definition="salary &gt; 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COMMISSION_PCT" id="5CDD4FA6-DDBB-18CE-F78F-172A35A40ABD">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>COMMISSION_PCT</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[Commission percentage of the employee; Only employees in sales
+department elgible for commission percentage]]></commentInRDBMS>
+<ownerDesignName>model</ownerDesignName>
+<importedID>7518C59C-968A-4BDF-66D9-CB5B0ACCD413</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,2,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MANAGER_ID" id="B3999F0D-DC4B-D636-DFE5-9C8E33CD1C39">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>MANAGER_ID</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[Manager id of the employee; has same domain as manager_id in
+departments table. Foreign key to employee_id column of employees table.
+(useful for reflexive joins and CONNECT BY query)]]></commentInRDBMS>
+<ownerDesignName>model</ownerDesignName>
+<importedID>803C2E2D-62FF-B45F-886A-11217C9AF844</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="31723D20-2A34-E5A9-D5B3-AAFE0913B89A" referredColumn="249B1D2B-1819-3D96-B790-3A4A3475A2BB"/>
+</associations>
+</Column>
+<Column name="DEPARTMENT_ID" id="F7D73964-354F-3F45-898C-89DA62EEC4F3">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>DEPARTMENT_ID</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[Department id where employee works; foreign key to department_id
+column of the departments table]]></commentInRDBMS>
+<ownerDesignName>model</ownerDesignName>
+<importedID>EC56DBEF-8E31-CBFE-5042-638F24BCC01A</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,4,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AE846E4D-9DCF-A493-3F2D-8623772126B8" referredColumn="D6CE03D3-B8A3-5444-FD26-3A456F600656"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CE4692F0-5B25-980A-421F-EBEB19A5265E" name="EMP_EMP_ID_PK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>EMP_EMP_ID_PK</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>2C9600F2-6B78-D70D-1110-5518EBB9B68F</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="249B1D2B-1819-3D96-B790-3A4A3475A2BB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8E3F8E30-EA05-3B8E-B580-EB9805610EC7" name="EMP_EMAIL_UK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>EMP_EMAIL_UK</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>4D5BE1D4-91C7-E5D4-DB57-A97AB99474E9</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="95871768-3F71-53ED-9DB7-617A6C7F330C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="68C72700-AF1F-22BF-7F90-02267A8D514A" schemaObject="DB248A45-7360-FE3D-B95B-43B3CED22BBB" name="EMP_DEPARTMENT_IX">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>EMP_DEPARTMENT_IX</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>868D4DE6-A68F-FE74-7C08-2D6E875C9F39</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F7D73964-354F-3F45-898C-89DA62EEC4F3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6FDE4C39-CECB-A753-2F4B-ABED34759A54" schemaObject="DB248A45-7360-FE3D-B95B-43B3CED22BBB" name="EMP_EMAIL_UK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>EMP_EMAIL_UK</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>EF98240B-73F8-A91D-9F99-65D02BA0E585</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="95871768-3F71-53ED-9DB7-617A6C7F330C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F0289AAB-085D-9241-E521-C7FF70F7794D" schemaObject="DB248A45-7360-FE3D-B95B-43B3CED22BBB" name="EMP_EMP_ID_PK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>EMP_EMP_ID_PK</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>A0486D76-3FF4-9D87-7919-C5ABFF91D812</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="249B1D2B-1819-3D96-B790-3A4A3475A2BB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="33704D06-80B4-5C8F-8D83-B7A428B1F325" schemaObject="DB248A45-7360-FE3D-B95B-43B3CED22BBB" name="EMP_JOB_IX">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>EMP_JOB_IX</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>7821CF0D-0055-08BF-8E32-F19260D45D24</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BB111218-40ED-0405-07BD-E1251C4D82F3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0BEF3A0C-0A55-A372-24CC-C66F79717EA9" schemaObject="DB248A45-7360-FE3D-B95B-43B3CED22BBB" name="EMP_MANAGER_IX">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>EMP_MANAGER_IX</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>DF5ED4FD-9AA5-F538-6790-608E2A472F79</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B3999F0D-DC4B-D636-DFE5-9C8E33CD1C39"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="525FDB60-5FC7-3B7E-0CE5-3D093CDB782A" schemaObject="DB248A45-7360-FE3D-B95B-43B3CED22BBB" name="EMP_NAME_IX">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>EMP_NAME_IX</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>BBEDC641-62A8-D845-9D49-DF3CC9627C6D</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1228BF45-E21C-12CB-789C-AE28AA9595C4"/>
+<colUsage columnID="86FC0B64-4EA7-0188-DBE6-B8DA1726517B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C194945C-9E4B-8142-3736-A080187E9997" name="EMP_DEPT_FK">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F7D73964-354F-3F45-898C-89DA62EEC4F3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5511F5CA-4B53-A364-B7DC-B84444CA6013" name="EMP_JOB_FK">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BB111218-40ED-0405-07BD-E1251C4D82F3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="33A2B8DA-FDAD-80ED-8958-84B433C7BA01" name="EMP_MANAGER_FK">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 03:34:56 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B3999F0D-DC4B-D636-DFE5-9C8E33CD1C39"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,12 @@
+.DS_Store
+*.class
+*.jar
+*.local
+*.dbf
+*.ctl
+*.log
+*.ora
+classes/
+built/
+.*
+!.gitignore

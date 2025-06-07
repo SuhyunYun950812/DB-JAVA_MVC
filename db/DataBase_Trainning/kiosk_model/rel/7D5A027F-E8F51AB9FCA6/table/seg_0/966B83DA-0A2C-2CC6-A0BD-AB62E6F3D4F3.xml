@@ -1,0 +1,172 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="966B83DA-0A2C-2CC6-A0BD-AB62E6F3D4F3" schemaObject="BC63CF9A-DE1B-9FDD-CB8A-7F7013C9436F" name="CART">
+<sourceConnName>로컬-KIOSK</sourceConnName>
+<sourceObjSchema>KIOSK</sourceObjSchema>
+<sourceObjName>CART</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-22 01:09:54 UTC</createdTime>
+<ownerDesignName>kiosk_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CART_INDEX" id="0A875C84-4FC8-02AF-70D1-7B3218BE4A58">
+<sourceConnName>로컬-KIOSK</sourceConnName>
+<sourceObjSchema>CART</sourceObjSchema>
+<sourceObjName>CART_INDEX</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-22 01:09:54 UTC</createdTime>
+<ownerDesignName>kiosk_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CART_TOTAL" id="467975F6-199E-8970-832F-444AED1FAE67">
+<sourceConnName>로컬-KIOSK</sourceConnName>
+<sourceObjSchema>CART</sourceObjSchema>
+<sourceObjName>CART_TOTAL</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-22 01:09:54 UTC</createdTime>
+<ownerDesignName>kiosk_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CART_COUNT" id="BD49A1E2-8C37-FE78-F41D-7246D3742076">
+<sourceConnName>로컬-KIOSK</sourceConnName>
+<sourceObjSchema>CART</sourceObjSchema>
+<sourceObjName>CART_COUNT</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-22 01:09:54 UTC</createdTime>
+<ownerDesignName>kiosk_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CART_DATE" id="52196B79-1264-5DD9-A2AC-995826EAA886">
+<sourceConnName>로컬-KIOSK</sourceConnName>
+<sourceObjSchema>CART</sourceObjSchema>
+<sourceObjName>CART_DATE</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-22 01:09:54 UTC</createdTime>
+<ownerDesignName>kiosk_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MENU_MENU_INDEX" id="6A3D8273-D7BB-583B-5764-AF863279D01D">
+<sourceConnName>로컬-KIOSK</sourceConnName>
+<sourceObjSchema>CART</sourceObjSchema>
+<sourceObjName>MENU_MENU_INDEX</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-22 01:09:54 UTC</createdTime>
+<ownerDesignName>kiosk_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MEMBER_MEMBER_ID" id="6A222505-29C6-9BAF-DF71-520D82957D07">
+<sourceConnName>로컬-KIOSK</sourceConnName>
+<sourceObjSchema>CART</sourceObjSchema>
+<sourceObjName>MEMBER_MEMBER_ID</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-22 01:09:54 UTC</createdTime>
+<ownerDesignName>kiosk_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ECB25EBE-A36F-8418-A934-90BE380DFE85" referredColumn="E2CDA37C-DEC6-78B6-71DE-D6F340857DBB"/>
+</associations>
+</Column>
+<Column name="MENU_NAME" id="50FB7ADF-DADB-796C-C052-E6A1ACD82901">
+<sourceConnName>로컬-KIOSK</sourceConnName>
+<sourceObjSchema>CART</sourceObjSchema>
+<sourceObjName>MENU_NAME</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-22 01:09:54 UTC</createdTime>
+<ownerDesignName>kiosk_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3DDC5ABB-3740-A334-F79B-AD6F9B296DAA" referredColumn="AFBDB207-2BA2-F0E9-B509-898935C4E6CD"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="819F580E-4AE4-F93F-E35A-23DAD07146D1" name="CART_PK">
+<sourceConnName>로컬-KIOSK</sourceConnName>
+<sourceObjSchema>KIOSK</sourceObjSchema>
+<sourceObjName>CART_PK</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-22 01:09:55 UTC</createdTime>
+<ownerDesignName>kiosk_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0A875C84-4FC8-02AF-70D1-7B3218BE4A58"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="19BA1843-A18E-CE48-248C-4D5A5B7414E8" schemaObject="BC63CF9A-DE1B-9FDD-CB8A-7F7013C9436F" name="CART_PK">
+<sourceConnName>로컬-KIOSK</sourceConnName>
+<sourceObjSchema>KIOSK</sourceObjSchema>
+<sourceObjName>CART_PK</sourceObjName>
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-22 01:09:54 UTC</createdTime>
+<ownerDesignName>kiosk_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0A875C84-4FC8-02AF-70D1-7B3218BE4A58"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="86CEDD8C-81BE-1A83-7FD9-952E63E23941" name="MEMBER_ID">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-22 01:09:55 UTC</createdTime>
+<ownerDesignName>kiosk_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6A222505-29C6-9BAF-DF71-520D82957D07"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="28A1D0C8-A589-5221-038A-1D2341A38F12" name="MENU_INDEX">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-22 01:09:55 UTC</createdTime>
+<ownerDesignName>kiosk_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="50FB7ADF-DADB-796C-C052-E6A1ACD82901"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

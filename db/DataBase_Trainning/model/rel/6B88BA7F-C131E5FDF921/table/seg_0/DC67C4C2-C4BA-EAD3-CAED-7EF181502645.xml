@@ -1,0 +1,116 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DC67C4C2-C4BA-EAD3-CAED-7EF181502645" name="CART">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 07:39:42 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<ordsAlias>table_16</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CART_INDEX" id="0145A87B-EDCC-B974-3B90-10B758E91A9F">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 07:40:34 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CART_TOTAL" id="CD387234-9DBF-696D-3070-F432F7CCEB38">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 07:41:13 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CART_COUNT" id="311E1AF4-5965-818B-7DF5-4B45E7341FEE">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 07:41:47 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CART_DATE" id="DBF6A902-34E4-8CF4-D98C-BC3FAF88A734">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 07:44:04 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MEMBER_ID" id="AC1271DC-D0FD-D92C-0475-75093C530C3F">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 07:48:38 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8B7514C0-3655-5754-FDA8-1CB93025A2BB" referredColumn="F505B645-A3D1-7E24-0365-8B11633BFCD7"/>
+</associations>
+</Column>
+<Column name="MENU_NAME" id="CB4ECDB2-1FE9-AB10-E5BA-8E21FF6E9907">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 08:14:50 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="61EBFA52-E592-D6F1-4F76-ABF9D68E39C2" referredColumn="91901EB6-9DE5-EEE5-08FF-80CAF498AF5F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9867C66C-0EC4-F47B-58BA-82163547109D" name="CART_PK">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 07:40:34 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0145A87B-EDCC-B974-3B90-10B758E91A9F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4A2FB904-68AA-BE49-D60C-F2254630F8E7" name="MEMBER_ID">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 07:48:38 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AC1271DC-D0FD-D92C-0475-75093C530C3F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DE78365C-56FC-EDFD-CD3C-06854B29CCEA" name="MENU_NAME">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-21 08:14:50 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CB4ECDB2-1FE9-AB10-E5BA-8E21FF6E9907"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

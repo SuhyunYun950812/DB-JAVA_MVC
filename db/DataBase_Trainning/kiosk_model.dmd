@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="kiosk_model" id="5C82A2FD-0829-4813-FA40-62E5558926B6" version="3.5">
+<createdBy>ysb08</createdBy>
+<createdTime>2025-05-22 00:48:47 UTC</createdTime>
+<ownerDesignName>kiosk_model</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>5C82A2FD-0829-4813-FA40-62E5558926B6</designId>
+</OSDM_Design>
