@@ -17,4 +17,5 @@ public class KioskProjectClassMain {
         }
         new Menu().loginMenu();;	// 처음 화면 함수
     }
+    
 }
