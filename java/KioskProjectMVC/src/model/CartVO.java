@@ -2,7 +2,7 @@ package model;
 
 public class CartVO {
 	private int no;
-	private String memberid;
+	private String memberId;
 	private int menuid;
 	private int quantity;
 	private int total;
@@ -11,10 +11,10 @@ public class CartVO {
 		super();
 	}
 
-	public CartVO(int no, String memberid, int menuid, int quantity, int total) {
+	public CartVO(int no, String memberId, int menuid, int quantity, int total) {
 		super();
 		this.no = no;
-		this.memberid = memberid;
+		this.memberId = memberId;
 		this.menuid = menuid;
 		this.quantity = quantity;
 		this.total = total;
@@ -29,11 +29,11 @@ public class CartVO {
 	}
 
 	public String getMemberid() {
-		return memberid;
+		return memberId;
 	}
 
-	public void setMemberid(String memberid) {
-		this.memberid = memberid;
+	public void setMemberid(String memberId) {
+		this.memberId = memberId;
 	}
 
 	public int getMenuid() {
@@ -62,7 +62,7 @@ public class CartVO {
 
 	@Override
 	public String toString() {
-		return "CartVO [no=" + no + ", memberid=" + memberid + ", menuid=" + menuid + ", quantity=" + quantity
+		return "CartVO [no=" + no + ", memberId=" + memberId + ", menuid=" + menuid + ", quantity=" + quantity
 				+ ", total=" + total + "]";
 	}
 	

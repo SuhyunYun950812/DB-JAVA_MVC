@@ -2,19 +2,21 @@ package controller;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import model.MemberVO;
 
 public class MemberDAO {
 	
-	public int insertMember(MemberVO member) {
+	String insertSQL = "INSERT INTO MEMBER (ID, PWD, NAME, PHONE ,AUTH) VALUES (?, ?, ?, ?, ?)";
+	String selectByIdCheckSQL = "SELECT *  FROM MEMBER where id = ?";
+	// 신규 가입자 리스트에 추가
+	public int insertMember(MemberVO memberVO) {
 	    Connection con = null;
 	    PreparedStatement pstmt = null;
 	    int count = 0;
 	    
-	    String insertSQL = "INSERT INTO MEMBER (ID, PWD, NAME, PHONE) VALUES (?, ?, ?, ?)";
-
 	    try {
 	        con = DBUtil.getConnection();
 	        
@@ -24,10 +26,10 @@ public class MemberDAO {
 	        }
 
 	        pstmt = con.prepareStatement(insertSQL);
-	        pstmt.setString(1, member.getId());
-	        pstmt.setString(2, member.getPwd());
-	        pstmt.setString(3, member.getName());
-	        pstmt.setString(4, member.getPhone());
+	        pstmt.setString(1, memberVO.getMemberId());
+	        pstmt.setString(2, memberVO.getPwd());
+	        pstmt.setString(3, memberVO.getName());
+	        pstmt.setString(4, memberVO.getPhone());
 
 	        count = pstmt.executeUpdate();
 	    } catch (SQLException e) {
@@ -38,5 +40,30 @@ public class MemberDAO {
 
 	    return count;
 	}
-	
+	// 동일 아이디 유무 확인.
+	public boolean selectByIdCheck(MemberVO memberVO) {
+		Connection con = null;
+		PreparedStatement pstmt = null; 
+		ResultSet rs = null; 
+		MemberVO _memberVO = null;
+		boolean idCheck = false;
+		try {
+			con = DBUtil.getConnection();
+			if(con == null) {
+				System.out.println("DB 연결이 문제발생했습니다. 빨리조치를 진행하겠습니다.");
+			}
+			pstmt =  con.prepareStatement(selectByIdCheckSQL); 
+			pstmt.setString(1, memberVO.getMemberId());
+			rs = pstmt.executeQuery();
+
+			if(rs.next()) {
+				idCheck = true;
+			}
+		} catch (SQLException e) {
+			System.out.println("createStatement 오류발생");
+		} finally {
+			DBUtil.dbClose(con, pstmt, rs);
+		}
+		return idCheck;
+	}
 }

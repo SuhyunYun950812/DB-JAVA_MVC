@@ -5,24 +5,43 @@ import java.util.Scanner;
 import model.MemberVO;
 
 public class MemberManager {
+		// 회원가입.
 	public void registerMember() {
-		Scanner sc = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 		MemberVO memberVO = new MemberVO();
+		MemberDAO memberDAO = new MemberDAO();
 		boolean idCheck = false;
-
+		
+		String id;
+		String pwd;
+		String name;
+		String phone;
+		
 		// 아이디 작성시 패턴검색 추가해야함.
+		do {
 		System.out.print("아이디 입력: ");
-		memberVO.setId(sc.nextLine());
+		id = scan.nextLine();
+		memberVO.setMemberId(id);
+		idCheck = memberDAO.selectByIdCheck(memberVO);
+		if (idCheck == true) {
+			System.out.println("아이디가 중복 되었습니다.");
+		}
+		}while(idCheck == true);
 
 		System.out.print("비밀번호 입력: ");
-		memberVO.setPwd(sc.nextLine());
+		pwd = scan.nextLine();
 
 		System.out.print("이름 입력: ");
-		memberVO.setName(sc.nextLine());
+		name = scan.nextLine();
 
 		System.out.print("전화번호 입력: ");
-		memberVO.setPhone(sc.nextLine());
-
+		phone = scan.nextLine();
+		
+		
+		memberVO.setMemberId(id);
+		memberVO.setPwd(pwd);
+		memberVO.setName(name);
+		memberVO.setPhone(phone);
 		MemberDAO dao = new MemberDAO();
 		int result = dao.insertMember(memberVO);
 

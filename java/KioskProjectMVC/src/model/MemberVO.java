@@ -1,29 +1,39 @@
 package model;
 
 public class MemberVO {
-	private String id;
+	private String memberId;
 	private String pwd;
 	private String name;
 	private String phone;
+	private int auth;
 
 	public MemberVO() {
 		super();
 	}
 	
-	public MemberVO(String id, String pwd, String name, String phone) {
+	public MemberVO(String memberId, String pwd, String name, String phone,int auth) {
 		super();
-		this.id = id;
+		this.memberId = memberId;
 		this.pwd = pwd;
 		this.name = name;
 		this.phone = phone;
+		this.auth = auth;
 	}
 
-	public String getId() {
-		return id;
+	public String getMemberId() {
+		return memberId;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setMemberId(String memberId) {
+		this.memberId = memberId;
+	}
+
+	public int getAuth() {
+		return auth;
+	}
+
+	public void setAuth(int auth) {
+		this.auth = auth;
 	}
 
 	public String getPwd() {
@@ -52,7 +62,7 @@ public class MemberVO {
 
 	@Override
 	public String toString() {
-		return "MemberVO [id=" + id + ", pwd=" + pwd + ", name=" + name + ", phone=" + phone + "]";
+		return "MemberVO [memberId=" + memberId + ", pwd=" + pwd + ", name=" + name + ", phone=" + phone + "]";
 	}
 
 }
