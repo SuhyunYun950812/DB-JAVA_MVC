@@ -10,7 +10,8 @@ import model.MemberVO;
 public class MemberDAO {
 	
 	String insertSQL = "INSERT INTO MEMBER (ID, PWD, NAME, PHONE ,AUTH) VALUES (?, ?, ?, ?, ?)";
-	String selectByIdCheckSQL = "SELECT *  FROM MEMBER where id = ?";
+	String selectByIdCheckSQL = "SELECT *  FROM MEMBER WHERE ID = ?";
+	String loginSQL = "SELECT * FROM MEMBER WHERE ID = ? AND PWD = ?";
 	// 신규 가입자 리스트에 추가
 	public int insertMember(MemberVO memberVO) {
 	    Connection con = null;
@@ -65,5 +66,10 @@ public class MemberDAO {
 			DBUtil.dbClose(con, pstmt, rs);
 		}
 		return idCheck;
+	}
+	public MemberVO loginMember(String id,String pwd) {
+		MemberVO mv = null;
+		
+		return mv;
 	}
 }

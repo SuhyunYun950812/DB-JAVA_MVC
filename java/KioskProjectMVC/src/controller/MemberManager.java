@@ -5,9 +5,31 @@ import java.util.Scanner;
 import model.MemberVO;
 
 public class MemberManager {
+	public static Scanner scan = new Scanner(System.in);
+	public void loginMember() {
+		MemberVO mv = new MemberVO();
+		String id;
+		String pwd;
+		boolean loginCheckFlag = false;
+		
+		while(!loginCheckFlag) {
+		System.out.print("아이디 입력:");
+		id = scan.nextLine();
+		System.out.print("패스워드 입력:");
+		pwd = scan.nextLine();
+		}
+		for(MemberVO data : MemberVO) {
+			if(data 이퀄스?) {
+				// 맞으면
+				loginCheckFlag = true;
+				System.out.println("로그인 성공!");
+				break;
+			}else //아니면
+				System.out.println("아이디 혹은 패스워드가 틀렸습니다.");
+		}
+	}
 		// 회원가입.
 	public void registerMember() {
-		Scanner scan = new Scanner(System.in);
 		MemberVO memberVO = new MemberVO();
 		MemberDAO memberDAO = new MemberDAO();
 		boolean idCheck = false;
