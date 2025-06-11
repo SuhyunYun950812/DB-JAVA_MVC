@@ -1,5 +1,6 @@
 package controller;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import model.MemberVO;
@@ -7,7 +8,8 @@ import model.MemberVO;
 public class MemberManager {
 	public static Scanner scan = new Scanner(System.in);
 	public void loginMember() {
-		MemberVO mv = new MemberVO();
+		MemberDAO md = new MemberDAO();
+		ArrayList<MemberVO> memberList = new ArrayList<MemberVO>();
 		String id;
 		String pwd;
 		boolean loginCheckFlag = false;
@@ -17,9 +19,10 @@ public class MemberManager {
 		id = scan.nextLine();
 		System.out.print("패스워드 입력:");
 		pwd = scan.nextLine();
-		}
-		for(MemberVO data : MemberVO) {
-			if(data 이퀄스?) {
+		
+		// 혼란스럽다 왜 안되냐
+		memberList = md.loginMember(id, pwd);
+			if(memberList == null) {
 				// 맞으면
 				loginCheckFlag = true;
 				System.out.println("로그인 성공!");
