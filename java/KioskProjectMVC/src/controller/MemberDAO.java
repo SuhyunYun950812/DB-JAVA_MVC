@@ -1,5 +1,6 @@
 package controller;
 
+import java.lang.reflect.Member;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,8 +14,8 @@ public class MemberDAO {
 	String insertSQL = "INSERT INTO MEMBER (ID, PWD, NAME, PHONE ,AUTH) VALUES (?, ?, ?, ?, ?)";
 	String selectByIdCheckSQL = "SELECT *  FROM MEMBER WHERE ID = ?";
 	String loginSQL = "SELECT * FROM MEMBER WHERE ID = ? AND PWD = ?";
-	String MemberListSQL = "SELCT * FROM MEMBER";
-	
+	String ShowMemberSQL = "SELCT * FROM MEMBER";
+
 	// 신규 가입자 리스트에 추가
 	public int insertMember(MemberVO memberVO) {
 		Connection con = null;
@@ -87,19 +88,19 @@ public class MemberDAO {
 				return null;
 			}
 			pstmt = con.prepareStatement(loginSQL);
-			pstmt.setString(1,id);
-			pstmt.setString(2,pwd);
-			
+			pstmt.setString(1, id);
+			pstmt.setString(2, pwd);
+
 			rs = pstmt.executeQuery();
-			
-			if(rs.next()) {
+
+			if (rs.next()) {
 				String memberId = rs.getString("ID");
 				String _pwd = rs.getString("PWD");
 				String name = rs.getString("NAME");
 				String phone = rs.getString("PHONE");
 				int auth = rs.getInt("AUTH");
-				
-				mv = new MemberVO(memberId,_pwd,name,phone,auth);
+
+				mv = new MemberVO(memberId, _pwd, name, phone, auth);
 			}
 
 		} catch (Exception e) {
@@ -107,5 +108,36 @@ public class MemberDAO {
 		}
 
 		return mv;
+	}
+
+	public ArrayList<MemberVO> showMember() {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		ArrayList<MemberVO> memberList = new ArrayList<MemberVO>();
+		try {
+			con = DBUtil.getConnection();
+			if (con == null) {
+				System.out.println("DB 연결이 문제발생했습니다.");
+				return null;
+			}
+			pstmt = con.prepareStatement(ShowMemberSQL);
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				String memberId = rs.getString("ID");
+				String pwd = rs.getString("PWD");
+				String name = rs.getString("NAME");
+				String phone = rs.getString("PHONE");
+				int auth = rs.getInt("AUTH");
+				
+				MemberVO mv = new MemberVO(memberId, pwd, name, phone, auth);
+				memberList.add(mv);
+			}
+		} catch (SQLException e) {
+			System.out.println("createStatement 오류발생");
+		} finally {
+			DBUtil.dbClose(con, pstmt, rs);
+		}
+		return memberList;
 	}
 }

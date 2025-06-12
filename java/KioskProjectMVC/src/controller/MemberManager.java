@@ -87,4 +87,20 @@ public class MemberManager {
 			System.out.println("❌ 회원가입 실패...");
 		}
 	}
+	public void showMember() {
+		MemberDAO md = new MemberDAO();
+		System.out.println("회원전체리스트 출력");
+		ArrayList<MemberVO> memberList = md.showMember();
+		if(memberList.size() <= 0) {
+			System.out.println("회원전체리스트에 내용이 없습니다.");
+			return;
+		}else if(memberList == null){
+			System.out.println("학생 전체 리스트 에러발생");
+			return;
+		}
+		for(MemberVO data : memberList) {
+			System.out.println(data.toString());
+		}
+		System.out.println();
+	}
 }
