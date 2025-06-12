@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import model.MemberVO;
 
@@ -12,7 +13,8 @@ public class MemberDAO {
 	String insertSQL = "INSERT INTO MEMBER (ID, PWD, NAME, PHONE ,AUTH) VALUES (?, ?, ?, ?, ?)";
 	String selectByIdCheckSQL = "SELECT *  FROM MEMBER WHERE ID = ?";
 	String loginSQL = "SELECT * FROM MEMBER WHERE ID = ? AND PWD = ?";
-
+	String MemberListSQL = "SELCT * FROM MEMBER";
+	
 	// 신규 가입자 리스트에 추가
 	public int insertMember(MemberVO memberVO) {
 		Connection con = null;
@@ -32,6 +34,7 @@ public class MemberDAO {
 			pstmt.setString(2, memberVO.getPwd());
 			pstmt.setString(3, memberVO.getName());
 			pstmt.setString(4, memberVO.getPhone());
+			pstmt.setInt(5, memberVO.getAuth());
 
 			count = pstmt.executeUpdate();
 		} catch (SQLException e) {
@@ -78,22 +81,25 @@ public class MemberDAO {
 
 		try {
 			con = DBUtil.getConnection();
-			System.out.println("DB 연결이 문제발생했습니다. 빨리조치를 진행하겠습니다.");
 
 			if (con == null) {
 				System.out.println("DB 연결이 문제발생했습니다. 빨리조치를 진행하겠습니다.");
 				return null;
 			}
-			pstmt.setString(1, mv.getMemberId());
-			pstmt.setString(2, mv.getPwd());
-
+			pstmt = con.prepareStatement(loginSQL);
+			pstmt.setString(1,id);
+			pstmt.setString(2,pwd);
+			
 			rs = pstmt.executeQuery();
+			
 			if(rs.next()) {
 				String memberId = rs.getString("ID");
 				String _pwd = rs.getString("PWD");
 				String name = rs.getString("NAME");
 				String phone = rs.getString("PHONE");
 				int auth = rs.getInt("AUTH");
+				
+				mv = new MemberVO(memberId,_pwd,name,phone,auth);
 			}
 
 		} catch (Exception e) {
