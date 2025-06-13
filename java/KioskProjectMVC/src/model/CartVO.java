@@ -5,19 +5,19 @@ public class CartVO {
 	private String memberId;
 	private int menuid;
 	private int quantity;
-	private int total;
+	private int price;
 	
 	public CartVO() {
 		super();
 	}
 
-	public CartVO(int no, String memberId, int menuid, int quantity, int total) {
+	public CartVO(int no, String memberId, int menuid, int quantity, int price) {
 		super();
 		this.no = no;
 		this.memberId = memberId;
 		this.menuid = menuid;
 		this.quantity = quantity;
-		this.total = total;
+		this.price = price;
 	}
 
 	public int getNo() {
@@ -52,18 +52,18 @@ public class CartVO {
 		this.quantity = quantity;
 	}
 
-	public int getTotal() {
-		return total;
+	public int getprice() {
+		return price;
 	}
 
-	public void setTotal(int total) {
-		this.total = total;
+	public void setprice(int price) {
+		this.price = price;
 	}
 
 	@Override
 	public String toString() {
 		return "CartVO [no=" + no + ", memberId=" + memberId + ", menuid=" + menuid + ", quantity=" + quantity
-				+ ", total=" + total + "]";
+				+ ", price=" + price + "]";
 	}
 	
 }

@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import controller.DBUtil;
 import controller.MemberManager;
+import controller.MenuManager;
 import model.MemberVO;
 import view.AdminChoice;
 import view.LoginChoice;
@@ -59,6 +60,7 @@ public class KioskProjectClassMain {
 
 	public static void menuMenu(MemberVO mv) {
 		// 메뉴 고를 때 쓸 변수 선언.
+		MenuManager mm = new MenuManager();
 		int choice = 0;
 		// 들어가고 나가기는 용 변수 선언
 		boolean exitFlag = false;
@@ -67,21 +69,23 @@ public class KioskProjectClassMain {
 			choice = Integer.parseInt(scan.nextLine());
 			switch (choice) {
 			case MenuChoice.메뉴선택:
-				//해당 DAO기능 넣기
+				mm.showMenu();
+				// 해당 DAO기능 넣기
 				break;
 			case MenuChoice.장바구니확인:
-				//해당 DAO기능 넣기
+				// 해당 DAO기능 넣기
 				break;
 			case MenuChoice.장바구니비우기:
-				//해당 DAO기능 넣기
+				// 해당 DAO기능 넣기
 				break;
 			case MenuChoice.결제하기:
-				//해당 DAO기능 넣기
+				// 해당 DAO기능 넣기
 				break;
 			case MenuChoice.관리자모드:
-				if(mv.getAuth() == 1) {
-					Menu.adminMenu();
-				}else {
+				// 0은 일반회원 1은 관리자로 구분
+				if (mv.getAuth() == 1) {
+					adminMenu();
+				} else {
 					System.out.println("⚠️ 일반회원은 접근이 불가합니다.");
 				}
 				break;
@@ -93,35 +97,38 @@ public class KioskProjectClassMain {
 	} // end of menuMenu
 
 	public static void adminMenu() {
-		int choice = 0;
+		MemberManager mmg = new MemberManager();
+		MenuManager mm = new MenuManager();
+		int adminChoice = 0;
 		// 들어가고 나가기는 용 변수 선언
 		boolean exitFlag = false;
 		while (!exitFlag) {
 			Menu.adminMenu();
-			choice = Integer.parseInt(scan.nextLine());
-			switch (choice) {
+			
+			adminChoice = Integer.parseInt(scan.nextLine());
+			switch (adminChoice) {
 			case AdminChoice.회원리스트확인:
-				//해당 DAO기능 넣기
+				mmg.showMember();
 				break;
 			case AdminChoice.메뉴리스트확인:
-				//해당 DAO기능 넣기
+				mm.showMenu();
 				break;
 			case AdminChoice.메뉴추가:
-				//해당 DAO기능 넣기
+				mm.addMenu();
 				break;
 			case AdminChoice.메뉴삭제:
-				//해당 DAO기능 넣기
+				mm.terminateMenu();
 				break;
 			case AdminChoice.메뉴수정:
-				//해당 DAO기능 넣기
+				mm.fixMenu();
 				break;
 			case AdminChoice.하루매출확인:
-				//해당 DAO기능 넣기
+				// 해당 DAO기능 넣기
 				break;
 			case AdminChoice.관리자메뉴나가기:
 				exitFlag = true;
 				break;
 			}
 		}
-	}	// end of adminMenu
+	} // end of adminMenu
 } // end of class

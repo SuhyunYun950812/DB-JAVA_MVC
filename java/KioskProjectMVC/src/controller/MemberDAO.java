@@ -14,7 +14,7 @@ public class MemberDAO {
 	String insertSQL = "INSERT INTO MEMBER (ID, PWD, NAME, PHONE ,AUTH) VALUES (?, ?, ?, ?, ?)";
 	String selectByIdCheckSQL = "SELECT *  FROM MEMBER WHERE ID = ?";
 	String loginSQL = "SELECT * FROM MEMBER WHERE ID = ? AND PWD = ?";
-	String ShowMemberSQL = "SELCT * FROM MEMBER";
+	String ShowMemberSQL = "SELECT * FROM MEMBER ORDER BY NAME";
 
 	// 신규 가입자 리스트에 추가
 	public int insertMember(MemberVO memberVO) {
@@ -39,7 +39,7 @@ public class MemberDAO {
 
 			count = pstmt.executeUpdate();
 		} catch (SQLException e) {
-			System.out.println("[에러] 회원 등록 중 오류 발생: " + e.getMessage());
+			System.out.println("[Error] 회원 등록 중 오류 발생: " + e.getMessage());
 		} finally {
 			DBUtil.dbClose(con, pstmt);
 		}

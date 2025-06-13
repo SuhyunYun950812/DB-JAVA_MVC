@@ -34,7 +34,7 @@ public class Menu {
 	// 관리자 메뉴
 	public static void adminMenu() {
         System.out.println();
-        System.out.println("과목 정보 메뉴 번호를 입력하세요.");
+		System.out.println("-------------------");
         System.out.println("1. 회원리스트확인");
         System.out.println("2. 메뉴리스트확인");
         System.out.println("3. 메뉴추가");

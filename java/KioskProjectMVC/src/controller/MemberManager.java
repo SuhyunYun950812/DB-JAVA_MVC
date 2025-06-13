@@ -93,7 +93,6 @@ public class MemberManager {
 		ArrayList<MemberVO> memberList = md.showMember();
 		if(memberList.size() <= 0) {
 			System.out.println("회원전체리스트에 내용이 없습니다.");
-			return;
 		}else if(memberList == null){
 			System.out.println("학생 전체 리스트 에러발생");
 			return;
