@@ -1,69 +1,69 @@
 package model;
 
+import java.sql.Date;
+
 public class CartVO {
-	private int no;
+	private int id;
 	private String memberId;
-	private int menuid;
+	private int menuId;
 	private int quantity;
-	private int price;
+	private String status;	// 재결제 방지
+	private Date regDate;
 	
 	public CartVO() {
 		super();
 	}
-
-	public CartVO(int no, String memberId, int menuid, int quantity, int price) {
+	
+	public CartVO(int id, String memberId, int menuId, int quantity, String status, Date regDate) {
 		super();
-		this.no = no;
+		this.id = id;
 		this.memberId = memberId;
-		this.menuid = menuid;
+		this.menuId = menuId;
 		this.quantity = quantity;
-		this.price = price;
+		this.status = status;
+		this.regDate = regDate;
 	}
 
-	public int getNo() {
-		return no;
+	public int getId() {
+		return id;
 	}
-
-	public void setNo(int no) {
-		this.no = no;
+	public void setId(int id) {
+		this.id = id;
 	}
-
-	public String getMemberid() {
+	public String getMemberId() {
 		return memberId;
 	}
-
-	public void setMemberid(String memberId) {
+	public void setMemberId(String memberId) {
 		this.memberId = memberId;
 	}
-
-	public int getMenuid() {
-		return menuid;
+	public int getMenuId() {
+		return menuId;
 	}
-
-	public void setMenuid(int menuid) {
-		this.menuid = menuid;
+	public void setMenuId(int menuId) {
+		this.menuId = menuId;
 	}
-
 	public int getQuantity() {
 		return quantity;
 	}
-
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-
-	public int getprice() {
-		return price;
+	public String getStatus() {
+		return status;
 	}
-
-	public void setprice(int price) {
-		this.price = price;
+	public void setStatus(String status) {
+		this.status = status;
 	}
-
-	@Override
-	public String toString() {
-		return "CartVO [no=" + no + ", memberId=" + memberId + ", menuid=" + menuid + ", quantity=" + quantity
-				+ ", price=" + price + "]";
+	public Date getRegDate() {
+		return regDate;
+	}
+	public void setRegDate(Date regDate) {
+		this.regDate = regDate;
 	}
 	
+	@Override
+	public String toString() {
+		return "[id=" + id + ", menuId=" + menuId + ", 수량 =" + quantity
+				+ "]";
+	}
 }

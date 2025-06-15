@@ -3,6 +3,7 @@ package main;
 import java.sql.Connection;
 import java.util.Scanner;
 
+import controller.CartManager;
 import controller.DBUtil;
 import controller.MemberManager;
 import controller.MenuManager;
@@ -61,6 +62,7 @@ public class KioskProjectClassMain {
 	public static void menuMenu(MemberVO mv) {
 		// 메뉴 고를 때 쓸 변수 선언.
 		MenuManager mm = new MenuManager();
+		CartManager cm = new CartManager();
 		int choice = 0;
 		// 들어가고 나가기는 용 변수 선언
 		boolean exitFlag = false;
@@ -70,13 +72,13 @@ public class KioskProjectClassMain {
 			switch (choice) {
 			case MenuChoice.메뉴선택:
 				mm.showMenu();
-				// 해당 DAO기능 넣기
+				cm.addToCart(mv.getMemberId());
 				break;
 			case MenuChoice.장바구니확인:
-				// 해당 DAO기능 넣기
+				cm.showCart(mv.getMemberId());
 				break;
 			case MenuChoice.장바구니비우기:
-				// 해당 DAO기능 넣기
+				cm.removeFromCart(mv.getMemberId());
 				break;
 			case MenuChoice.결제하기:
 				// 해당 DAO기능 넣기
