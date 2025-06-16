@@ -1,12 +1,14 @@
 package main;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Scanner;
 
 import controller.CartManager;
 import controller.DBUtil;
 import controller.MemberManager;
 import controller.MenuManager;
+import controller.PaymentManager;
 import model.MemberVO;
 import view.AdminChoice;
 import view.LoginChoice;
@@ -52,6 +54,7 @@ public class KioskProjectClassMain {
 				} // end of switch case
 			} catch (Exception e) {
 				System.out.println("\n입력에 오류가 있습니다. \n 프로그램을 다시 시작하세요.");
+				 e.printStackTrace();
 				exitFlag = true;
 			} // end of catch
 		} // end of while
@@ -63,6 +66,7 @@ public class KioskProjectClassMain {
 		// 메뉴 고를 때 쓸 변수 선언.
 		MenuManager mm = new MenuManager();
 		CartManager cm = new CartManager();
+		PaymentManager pm = new PaymentManager();
 		int choice = 0;
 		// 들어가고 나가기는 용 변수 선언
 		boolean exitFlag = false;
@@ -81,7 +85,14 @@ public class KioskProjectClassMain {
 				cm.removeFromCart(mv.getMemberId());
 				break;
 			case MenuChoice.결제하기:
-				// 해당 DAO기능 넣기
+				try {
+					System.out.println("결제 수단 입력 (카드 / 현금)");
+					String payMethod = scan.nextLine();
+					pm.payday(mv.getMemberId(), payMethod);
+				}catch(Exception e){
+					System.out.println("❌ 결제 처리 중 오류 발생: " + e.getMessage());
+					e.printStackTrace();
+				}
 				break;
 			case MenuChoice.관리자모드:
 				// 0은 일반회원 1은 관리자로 구분

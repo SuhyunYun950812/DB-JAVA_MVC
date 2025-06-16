@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import model.CartVO;
+import model.MenuVO;
 
 public class CartDAO {
 
@@ -179,5 +180,20 @@ public class CartDAO {
 			DBUtil.dbClose(con, pstmt);
 		}
 		return count;
+	}
+	
+	public int getTotalAmount(String memberId) {
+	    int total = 0;
+	    MenuDAO md = new MenuDAO();
+	    ArrayList<CartVO> cartList = selectCartByMember(memberId);
+	    for (CartVO data : cartList) {
+	    	MenuVO mv = md.selectByMenuId(data.getMenuId());
+	    	if(mv == null) {
+	    		System.out.println("❌ 메뉴 ID " + data.getMenuId() + "에 해당하는 메뉴 정보가 없습니다.");
+	    		break;
+	    	}
+	    	total += mv.getPrice() * data.getQuantity();
+	    }
+	    return total;
 	}
 }

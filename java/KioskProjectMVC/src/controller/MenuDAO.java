@@ -12,6 +12,7 @@ public class MenuDAO {
 	// 할것 : 메뉴 목록&담기 ,메뉴 추가, 메뉴 삭제 ,메뉴 수정
 	String ShowMenuSQL = "SELECT * FROM MENU ORDER BY ID";
 	String selectByMenuCheckSQL = "SELECT *  FROM MENU WHERE NAME = ?";
+	String selectByMenuIdSQL = "SELECT * FROM MENU WHERE ID = ?";
 	String InsertMenuSQL = "INSERT INTO MENU (NAME, PRICE) VALUES (?, ?)";
 	String UpdateMenuSQL = "UPDATE MENU SET NAME = ?,PRICE = ? WHERE ID = ?";
 	String DeleteMenuSQL = "DELETE FROM MENU WHERE ID = ?";
@@ -97,6 +98,41 @@ public class MenuDAO {
 		return menuCheck;
 	}
 
+	public MenuVO selectByMenuId(int id) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		MenuVO mv = null;
+
+		try {
+			con = DBUtil.getConnection();
+			if (con == null) {
+				System.out.println("DB 연결이 문제발생했습니다. 빨리조치를 진행하겠습니다.");
+				return null;
+			}
+			
+			pstmt = con.prepareStatement(selectByMenuIdSQL);
+			pstmt.setInt(1,id);
+			rs = pstmt.executeQuery();
+
+			if (rs.next()) {
+				mv = new MenuVO();
+				mv.setId(rs.getInt("ID"));
+				mv.setName(rs.getString("NAME"));
+				mv.setPrice(rs.getInt("PRICE"));
+			}else {
+				System.out.println("❌ menuId " + id + "에 해당하는 메뉴가 없습니다.");
+			}
+			
+		} catch (SQLException e) {	
+			System.out.println("[Error] 메뉴 ID 조회 실패: " + e.getMessage	());
+			e.printStackTrace();
+		} finally {
+			DBUtil.dbClose(con, pstmt, rs);
+		}
+		return mv;
+	}
+	
 	public int updateMenu(MenuVO menuVO) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
