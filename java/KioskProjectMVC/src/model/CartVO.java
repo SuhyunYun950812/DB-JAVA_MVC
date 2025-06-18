@@ -63,7 +63,7 @@ public class CartVO {
 	
 	@Override
 	public String toString() {
-		return "[id=" + id + ", menuId=" + menuId + ", 수량 =" + quantity
+		return "[ 등록 번호 = " + id + ", 메뉴 번호 = " + menuId + ", 수량 =" + quantity
 				+ "]";
 	}
 }

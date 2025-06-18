@@ -62,7 +62,7 @@ public class MemberVO {
 
 	@Override
 	public String toString() {
-		return "MemberVO [memberId=" + memberId + ", pwd=" + pwd + ", name=" + name + ", phone=" + phone + "]";
+		return "회원 목록 [회원 ID = " + memberId + ", 성명 = " + name + ", 연락처 =" + phone + "]";
 	}
 
 }

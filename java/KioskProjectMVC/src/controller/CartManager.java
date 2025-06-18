@@ -44,7 +44,7 @@ public class CartManager {
 		System.out.println("메뉴리스트 출력");
 		ArrayList<CartVO> CartList = cd.selectCartByMember(memberId);
 		if (CartList.size() <= 0) {
-			System.out.println("메뉴가 단 1개도 없습니다.");
+			System.out.println("카트에 메뉴가 단 1개도 없습니다.");
 		} else if (CartList == null) {
 			System.out.println("메뉴리스트 에러 발생");
 			return;
